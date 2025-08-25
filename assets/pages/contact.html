@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>A.Owais khan</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/me.jpg">
+</head>
+<body>
+        <!-- HEADER SECTION -->
+        <header class="header">
+            <a href="../../index.html" class="logo">A.Owais khan</a>
+    
+                    <img src="../SVG/hamburger-menu-icon.svg" id="menu-icon"></img>
+
+    
+            <nav class="navbar">
+                <a href="../../index.html">Home</a>
+                <a href="documentation.html">Documentation</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="courses.html">Courses</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+        </header>
+            <!-- Contact Section -->
+
+    <section id="contact" class="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <div id="message" style="text-align:center; margin:10px; padding:10px; border-radius:5px; display:none;"></div>
+
+        <form id="contactForm" action="save_contact.php" method="POST">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-box">
+                <input type="number" name="number" placeholder="Phone Number">
+            </div>
+
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="p-btn p-btn-primary">
+        </form>
+    </section>
+
+
+   <!-- ads social bar link -->
+    <script type='text/javascript'
+        src='//pl27428749.profitableratecpm.com/1b/00/e9/1b00e9b611843a363e841a02a1648720.js'></script>
+        <!-- end -->
+    <script src="../js/script.js"></script>
+    
+    <script>
+        // Handle form submission
+        document.getElementById('contactForm').onsubmit = function(e) {
+            e.preventDefault();
+
+            // Get form values
+            const name = this.name.value;
+            const email = this.email.value;
+            const phone = this.number.value;
+            const msg = this.message.value;
+
+            // Simple validation
+            if (!name || !email || !msg) {
+                showMessage('Please fill in all required fields (Name, Email, and Message)!', 'error');
+                return;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showMessage('Please enter a valid email address!', 'error');
+                return;
+            }
+
+            // Show loading message
+            showMessage('Sending message...', 'info');
+
+            // Create FormData object
+            const formData = new FormData(this);
+
+            // Send AJAX request
+            fetch('save_contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showMessage(data.message, 'success');
+                    // Clear form on success
+                    this.reset();
+                } else {
+                    showMessage(data.message, 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showMessage('An error occurred while sending your message. Please try again.', 'error');
+            });
+        };
+
+        // Function to show messages
+        function showMessage(message, type) {
+            const messageDiv = document.getElementById('message');
+            messageDiv.innerHTML = message;
+            messageDiv.style.display = 'block';
+
+            // Set colors based on message type
+            switch(type) {
+                case 'success':
+                    messageDiv.style.color = 'green';
+                    messageDiv.style.border = '1px solid green';
+                    messageDiv.style.backgroundColor = '#d4edda';
+                    break;
+                case 'error':
+                    messageDiv.style.color = 'red';
+                    messageDiv.style.border = '1px solid red';
+                    messageDiv.style.backgroundColor = '#f8d7da';
+                    break;
+                case 'info':
+                    messageDiv.style.color = 'blue';
+                    messageDiv.style.border = '1px solid blue';
+                    messageDiv.style.backgroundColor = '#d1ecf1';
+                    break;
+            }
+
+            // Hide message after 5 seconds for success/error, 3 seconds for info
+            const hideDelay = type === 'info' ? 3000 : 5000;
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, hideDelay);
+        }
+    </script>
+
+</body>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Video</title>
+    <link rel="icon" href="../images/me.jpg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER SECTION -->
+    <header class="header">
+        <a href="../../index.html" class="logo">A.Owais khan</a>
+
+        <img src="../SVG/hamburger-menu-icon.svg" id="menu-icon"></img>
+
+
+        <nav class="navbar">
+            <a href="../../index.html">Home</a>
+            <a href="assets/pages/documentation.html">Documentation</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="courses.html">Courses</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <br>
+
+    <!-- Navigation Bar -->
+    <div class="c-navbar">
+        <div class="navbar-left">
+
+            <div class="logo-small">
+                <h2 onclick="window.location.href='../../index.html'">PlayList</h2>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <button class="home-btn" onclick="history.back()">
+                <!-- <i class="fas fa-home"></i> -->
+                X</button>
+        </div>
+    </div>
+
+
+
+
+    <div class="row">
+
+
+
+        <!-- left column -->
+        <div class="leftcolumn">
+            <!-- card 1 -->
+            <div class="video-container pornhub-style card">
+                <h2></h2>
+                <h5></h5>
+                <!-- Left side - Video player and info -->
+                <div class="video-main-column">
+                    <div class="video-player-wrapper">
+                        <div class="video-player" id="video-player">
+                            <!-- Video will be loaded here by JavaScript -->
+                        </div>
+                    </div>
+
+
+                    <div class="video-info">
+                        <h1 class="video-title" id="video-title"></h1>
+                        <span class="channel-name" id="channel-name"></span>
+                    </div>
+
+                </div>
+                <p></p>
+            </div>
+        </div>
+
+        <!-- right column -->
+        <div class="rightcolumn">
+
+            <div class="card">
+                <!-- <h3>ADS</h3> -->
+                <script async="async" data-cfasync="false"
+                    src="//pl27428805.profitableratecpm.com/ae3d30c834c02173c9b77f0abec90323/invoke.js"></script>
+                <div id="container-ae3d30c834c02173c9b77f0abec90323"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="related-videos-section">
+        <h2>Related Videos</h2>
+
+        <div class="video-grid">
+
+            <!-- Video Card  -->
+            <div class="video-card"
+                onclick="openVideo('https://www.youtube.com/embed/9cmy6AK3IBA?si=mAxHAhWNygYYCVTX', 'Web Class 1', 'Sheryians Coding School' )">
+                <div class="thumbnail">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9cmy6AK3IBA?si=mAxHAhWNygYYCVTX"
+                        loading="lazy" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Web Class 1</h3>
+                    <p class="channel-name">Sheryians Coding School</p>
+                </div>
+            </div>
+            <!-- Video Card  -->
+            <div class="video-card"
+                onclick="openVideo('https://www.youtube.com/embed/L9qixi858Ag?si=Tt2tqChF66OG29zc', 'Unreal Engine Class 1','none' )">
+                <div class="thumbnail">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/L9qixi858Ag?si=Tt2tqChF66OG29zc"
+                        loading="lazy" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Unreal Engine Class 1</h3>
+                    <p class="channel-name">none</p>
+                </div>
+            </div>
+            <!-- Video Card  -->
+            <div class="video-card"
+                onclick="openVideo('https://www.youtube.com/embed/W1iXIiF5iMw?si=VnSaY3QueZYTdlu8', 'Python Class 1', 'Code with Kylie' )">
+                <div class="thumbnail">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/W1iXIiF5iMw?si=VnSaY3QueZYTdlu8"
+                        loading="lazy" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Python Class 1</h3>
+                    <p class="channel-name">Code with Kylie</p>
+                </div>
+            </div>
+            <!-- Video Card  -->
+            <div class="video-card"
+                onclick="openVideo('https://www.youtube.com/embed/hlGoQC332VM?si=JNzJyUBAMMSqZMlG', 'SQL  Complete Course in 3 Hours  SQL One Shot using MySQL', 'Apna College' )">
+                <div class="thumbnail">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hlGoQC332VM?si=JNzJyUBAMMSqZMlG"
+                        loading="lazy" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">SQL Complete Course in 3 Hours SQL One Shot using MySQL</h3>
+                    <p class="channel-name">Apna College</p>
+                </div>
+            </div>
+            <!-- Video Card -->
+            <div class="video-card"
+                onclick="openVideo('https://www.youtube.com/embed/ihc83ldGxy8?si=XMH6xCnPJ0VhmEvu', 'Game Hacking Class 1 ','none' )">
+                <div class="thumbnail">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ihc83ldGxy8?si=XMH6xCnPJ0VhmEvu"
+                        loading="lazy" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Game Hacking Class 1</h3>
+                    <p class="channel-name">none</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+        <!-- ads social bar link -->
+    <script type='text/javascript'
+        src='//pl27428749.profitableratecpm.com/1b/00/e9/1b00e9b611843a363e841a02a1648720.js'></script>
+        <!-- end -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const videoSrc = urlParams.get('src');
+            const videoTitle = urlParams.get('title');
+            const channelName = urlParams.get('channel');
+            const viewCount = urlParams.get('views');
+            const uploadDate = urlParams.get('date');
+
+            // Set video player content
+            if (videoSrc) {
+                let finalSrc = videoSrc;
+                // Check if it's a Google Drive preview link
+                if (videoSrc.includes('drive.google.com/file/') && videoSrc.includes('/preview')) {
+                    // Add autoplay=1 parameter
+                    if (videoSrc.includes('?')) {
+                        finalSrc += '&autoplay=1';
+                    } else {
+                        finalSrc += '?autoplay=1';
+                    }
+                }
+                // If it's an iframe source
+                document.getElementById('video-player').innerHTML = `<iframe src="${finalSrc}" frameborder="0" scrolling="no" allowfullscreen width="100%" height="100%" allow="autoplay; fullscreen"></iframe>`;
+            } else {
+                // If it's an image, we'll show the image and simulate a video player
+                document.getElementById('video-player').innerHTML = `
+                    <div class="video-image-container">
+                        <img src="${videoSrc}" alt="Video">
+                        <div class="play-icon-overlay">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Set video details
+            if (videoTitle) document.getElementById('video-title').textContent = videoTitle;
+            if (channelName) document.getElementById('channel-name').textContent = channelName;
+
+            // Set page title
+            if (videoTitle) document.title = `${videoTitle} - Watch`;
+        });
+    </script>
+</body>
+
+</html>
