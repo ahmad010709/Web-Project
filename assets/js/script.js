@@ -84,7 +84,7 @@ if (typeof Typed !== 'undefined') {
         // Create new Typed.js instance with configuration object
         const home = new Typed('.home-mt', {
             // Array of strings to be typed out sequentially
-            strings: ['OS Linus Tools','Websites','Web/Apps Designs','Python Projects'],
+            strings: ['3D Gmae','Web/Apps','Python Tools'],
             
             // Speed of typing in milliseconds per character
             typeSpeed: 80,
